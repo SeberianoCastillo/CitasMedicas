@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 
 namespace BL.CitasMedicas
@@ -15,49 +16,22 @@ namespace BL.CitasMedicas
     }
     public class CitasBL
     {
-
+        contexto _contexto;
         public BindingList<Paciente> ListaPacientes { get; set; }
 
         public CitasBL()
         {
+            _contexto = new contexto();
             ListaPacientes = new BindingList<Paciente>();
 
-            var paciente1 = new Paciente();
-            paciente1.Id = 501;
-            paciente1.Nombre = "Carlos Carlos";
-            paciente1.MotivoCita = "Revisión de Rutina";
-            paciente1.Medico = "Cardiologo";
-            paciente1.Fecha = "01/08/2021";
-            paciente1.Hora = "08:00";
-            paciente1.Precio = 500.00;
-
-            ListaPacientes.Add(paciente1);
-
-            var paciente2 = new Paciente();
-            paciente2.Id = 502;
-            paciente2.Nombre = "Juan Juan";
-            paciente2.MotivoCita = "Revisión de Rutina";
-            paciente2.Medico = "Pediatra";
-            paciente2.Fecha = "01/08/2021";
-            paciente2.Hora = "09:00";
-            paciente2.Precio = 600.00;
-
-            ListaPacientes.Add(paciente2);
-
-            var paciente3 = new Paciente();
-            paciente3.Id = 503;
-            paciente3.Nombre = "Pedro Pedro";
-            paciente3.MotivoCita = "Revisión de Rutina";
-            paciente3.Medico = "Internista";
-            paciente3.Fecha = "01/08/2021";
-            paciente3.Hora = "10:00";
-            paciente3.Precio = 700.00;
-
-            ListaPacientes.Add(paciente3);
+           
         }
 
         public BindingList<Paciente> ObtenerCitas()
         {
+
+            _contexto.Paciente.Load();
+            ListaPacientes = _contexto.Paciente.Local.ToBindingList();
             return ListaPacientes;
         }
 
@@ -68,10 +42,8 @@ namespace BL.CitasMedicas
             {
                 return resultado;
             }
-            if (paciente.Id == 0)
-            {
-                paciente.Id = ListaPacientes.Max(item => item.Id) + 1;
-            }
+            _contexto.SaveChanges();
+
             resultado.Exitoso = true;
             return resultado;
         }
@@ -89,6 +61,7 @@ namespace BL.CitasMedicas
                 if (paciente.Id == id)
                 {
                     ListaPacientes.Remove(paciente);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }

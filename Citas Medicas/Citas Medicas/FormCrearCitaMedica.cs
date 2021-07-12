@@ -26,6 +26,7 @@ namespace Citas_Medicas
             {
                 listaPacientesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Cita Guardada");
             }
             else
             {
