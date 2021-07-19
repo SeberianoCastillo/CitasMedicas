@@ -1,6 +1,8 @@
-﻿using System.ComponentModel;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using System.ComponentModel;
 using System.Linq;
+using System;
 
 namespace BL.CitasMedicas
 {
@@ -16,20 +18,17 @@ namespace BL.CitasMedicas
     }
     public class CitasBL
     {
-        contexto _contexto;
+        Contexto _contexto;
         public BindingList<Paciente> ListaPacientes { get; set; }
 
         public CitasBL()
         {
-            _contexto = new contexto();
+            _contexto = new Contexto();
             ListaPacientes = new BindingList<Paciente>();
-
-           
         }
 
         public BindingList<Paciente> ObtenerCitas()
         {
-
             _contexto.Paciente.Load();
             ListaPacientes = _contexto.Paciente.Local.ToBindingList();
             return ListaPacientes;
@@ -109,6 +108,15 @@ namespace BL.CitasMedicas
                 resultado.Exitoso = false;
             }
             return resultado;
+        }
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
         }
     }
     public class Resultado

@@ -88,7 +88,12 @@ namespace Citas_Medicas
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+            _citas.CancelarCambios();
+        }
+
+        private void FormCrearCitaMedica_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

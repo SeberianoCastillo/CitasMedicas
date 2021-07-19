@@ -8,21 +8,21 @@ namespace BL.CitasMedicas
 {
     public class SeguridadBL
     {
-       public bool Autorizar(string usuario, string contrasena)
+        Contexto _contexto;
+        public SeguridadBL()
         {
-            if (usuario == "admin" && contrasena == "123")
-
-            {
-                return true;
-            } else
-
-            {
-                if (usuario == "user" && contrasena == "456")
-                {
-                    return true;
-                }
-            }
-
+                _contexto = new Contexto(); 
+        }
+       public bool Autorizar(string usuario, string contrasena)
+       {
+            var usuarios = _contexto.Usuarios.ToList();
+           foreach (var usuarioDB in usuarios)
+           {
+               if (usuario == usuarioDB.NombreUsuario && contrasena == usuarioDB.Contrasena)
+               {
+                   return true;
+               }
+           }
             return false;
         }
 

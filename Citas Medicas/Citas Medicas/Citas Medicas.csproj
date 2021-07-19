@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Aha-Soft-Medical-Head-physician.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -117,7 +120,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.CitasMedicas.CitasBL.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Doctor.datasource" />
-    <None Include="Properties\DataSources\BL.CitasMedicas.DoctoresBL.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.EspecialidadesBL.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Paciente.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.SeguridadBL.datasource" />
@@ -141,6 +144,9 @@
       <Project>{0e1183aa-ba42-4709-9063-2e3c69fbd7f9}</Project>
       <Name>BL.CitasMedicas</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aha-Soft-Medical-Head-physician.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

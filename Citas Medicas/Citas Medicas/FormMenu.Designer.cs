@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.citaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearCitaMedicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +42,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.citaMedicaToolStripMenuItem,
             this.listaDeCitasMedicasToolStripMenuItem,
@@ -57,12 +59,14 @@
             // 
             this.citaMedicaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearCitaMedicaToolStripMenuItem});
+            this.citaMedicaToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.citaMedicaToolStripMenuItem.Name = "citaMedicaToolStripMenuItem";
             this.citaMedicaToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.citaMedicaToolStripMenuItem.Text = "Cita Medica";
             // 
             // crearCitaMedicaToolStripMenuItem
             // 
+            this.crearCitaMedicaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSlateGray;
             this.crearCitaMedicaToolStripMenuItem.Name = "crearCitaMedicaToolStripMenuItem";
             this.crearCitaMedicaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.crearCitaMedicaToolStripMenuItem.Text = "Crear Cita Medica";
@@ -72,6 +76,7 @@
             // 
             this.listaDeCitasMedicasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarCitasProgramadasToolStripMenuItem});
+            this.listaDeCitasMedicasToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.listaDeCitasMedicasToolStripMenuItem.Name = "listaDeCitasMedicasToolStripMenuItem";
             this.listaDeCitasMedicasToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
             this.listaDeCitasMedicasToolStripMenuItem.Text = "Lista de Citas Medicas";
@@ -85,6 +90,7 @@
             // 
             // listaDeDoctoresYEspecialidadesToolStripMenuItem
             // 
+            this.listaDeDoctoresYEspecialidadesToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Name = "listaDeDoctoresYEspecialidadesToolStripMenuItem";
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(197, 20);
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Text = "Lista de Doctores y Especialidades";
@@ -94,6 +100,7 @@
             // 
             this.registrarseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem});
+            this.registrarseToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
             this.registrarseToolStripMenuItem.Name = "registrarseToolStripMenuItem";
             this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.registrarseToolStripMenuItem.Text = "Seguridad";
@@ -101,7 +108,7 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
@@ -109,8 +116,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(778, 366);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "FormMenu";
             this.Text = "Menú Principal";

@@ -70,7 +70,8 @@ namespace Citas_Medicas
         private void login()
         {
             var formlogin = new FormLogin();
-            formlogin.ShowDialog();
+            formlogin.MdiParent = this;
+            formlogin.Show();
         }
 
         private void crearCitaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
