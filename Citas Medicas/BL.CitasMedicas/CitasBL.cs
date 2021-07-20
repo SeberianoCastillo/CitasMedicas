@@ -11,7 +11,8 @@ namespace BL.CitasMedicas
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string MotivoCita { get; set; }
-        public string Medico { get; set; }
+        public int DoctorId { get; set; }
+        public Doctor Doctor { get; set; }
         public string Fecha { get; set; }
         public string Hora { get; set; }
         public double Precio { get; set; }
@@ -90,7 +91,7 @@ namespace BL.CitasMedicas
                 resultado.Exitoso = false;
             }
 
-            if (string.IsNullOrEmpty(paciente.Medico) == true)
+            if (paciente.DoctorId == 0)
             {
                 resultado.Mensaje = "Ingrese un Medico al paciente";
                 resultado.Exitoso = false;

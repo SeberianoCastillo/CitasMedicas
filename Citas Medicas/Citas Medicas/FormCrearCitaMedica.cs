@@ -7,12 +7,16 @@ namespace Citas_Medicas
     public partial class FormCrearCitaMedica : Form
     {
         private CitasBL _citas;
+        private DoctoresBl _doctores;
         public FormCrearCitaMedica()
         {
             InitializeComponent();
 
             _citas = new CitasBL();
             listaPacientesBindingSource.DataSource = _citas.ObtenerCitas();
+
+            _doctores = new DoctoresBl();
+            listaDoctoresBindingSource.DataSource = _doctores.ObtenerDoctores();
         }
 
         private void listaPacientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)

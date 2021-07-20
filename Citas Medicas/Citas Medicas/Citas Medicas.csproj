@@ -119,11 +119,19 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.CitasMedicas.CitasBL.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.DatosdeInicio.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Doctor.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.DoctoresBl.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.Especialidades.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.EspecialidadesBL.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Paciente.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.Tipo.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.TiposBl.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.Usuario.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.UsuariosBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
