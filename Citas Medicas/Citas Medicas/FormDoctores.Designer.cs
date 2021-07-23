@@ -82,36 +82,43 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
+            activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            activoLabel.ForeColor = System.Drawing.Color.Bisque;
             activoLabel.Location = new System.Drawing.Point(12, 173);
             activoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.Size = new System.Drawing.Size(47, 13);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
             // disponibilidadLabel
             // 
             disponibilidadLabel.AutoSize = true;
+            disponibilidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            disponibilidadLabel.ForeColor = System.Drawing.Color.Bisque;
             disponibilidadLabel.Location = new System.Drawing.Point(11, 150);
             disponibilidadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             disponibilidadLabel.Name = "disponibilidadLabel";
-            disponibilidadLabel.Size = new System.Drawing.Size(110, 13);
+            disponibilidadLabel.Size = new System.Drawing.Size(133, 13);
             disponibilidadLabel.TabIndex = 3;
             disponibilidadLabel.Text = "Disponibilidad por dia:";
             // 
             // especialidadLabel
             // 
             especialidadLabel.AutoSize = true;
+            especialidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            especialidadLabel.ForeColor = System.Drawing.Color.Bisque;
             especialidadLabel.Location = new System.Drawing.Point(11, 100);
             especialidadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             especialidadLabel.Name = "especialidadLabel";
-            especialidadLabel.Size = new System.Drawing.Size(70, 13);
+            especialidadLabel.Size = new System.Drawing.Size(83, 13);
             especialidadLabel.TabIndex = 5;
             especialidadLabel.Text = "Especialidad:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
+            idLabel.ForeColor = System.Drawing.Color.Bisque;
             idLabel.Location = new System.Drawing.Point(12, 49);
             idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
@@ -122,77 +129,83 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.ForeColor = System.Drawing.Color.Bisque;
             nombreLabel.Location = new System.Drawing.Point(11, 78);
             nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.Size = new System.Drawing.Size(54, 13);
             nombreLabel.TabIndex = 9;
             nombreLabel.Text = "Nombre:";
             // 
             // precioLabel
             // 
             precioLabel.AutoSize = true;
+            precioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            precioLabel.ForeColor = System.Drawing.Color.Bisque;
             precioLabel.Location = new System.Drawing.Point(11, 127);
             precioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(78, 13);
+            precioLabel.Size = new System.Drawing.Size(94, 13);
             precioLabel.TabIndex = 11;
             precioLabel.Text = "Precio por cita:";
             // 
             // fotoLabel
             // 
             fotoLabel.AutoSize = true;
+            fotoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fotoLabel.ForeColor = System.Drawing.Color.Bisque;
             fotoLabel.Location = new System.Drawing.Point(417, 31);
             fotoLabel.Name = "fotoLabel";
-            fotoLabel.Size = new System.Drawing.Size(31, 13);
+            fotoLabel.Size = new System.Drawing.Size(36, 13);
             fotoLabel.TabIndex = 13;
             fotoLabel.Text = "Foto:";
             // 
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaDoctoresBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(127, 175);
+            this.activoCheckBox.Location = new System.Drawing.Point(147, 175);
             this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(279, 16);
+            this.activoCheckBox.Size = new System.Drawing.Size(238, 16);
             this.activoCheckBox.TabIndex = 5;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // disponibilidadTextBox
             // 
             this.disponibilidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Disponibilidad", true));
-            this.disponibilidadTextBox.Location = new System.Drawing.Point(127, 150);
+            this.disponibilidadTextBox.Location = new System.Drawing.Point(147, 150);
             this.disponibilidadTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.disponibilidadTextBox.Name = "disponibilidadTextBox";
-            this.disponibilidadTextBox.Size = new System.Drawing.Size(281, 20);
+            this.disponibilidadTextBox.Size = new System.Drawing.Size(57, 20);
             this.disponibilidadTextBox.TabIndex = 4;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(127, 47);
+            this.idTextBox.Location = new System.Drawing.Point(147, 47);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(281, 20);
+            this.idTextBox.Size = new System.Drawing.Size(40, 20);
             this.idTextBox.TabIndex = 0;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(126, 74);
+            this.nombreTextBox.Location = new System.Drawing.Point(146, 74);
             this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(281, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(240, 20);
             this.nombreTextBox.TabIndex = 1;
             // 
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(126, 125);
+            this.precioTextBox.Location = new System.Drawing.Point(146, 125);
             this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(281, 20);
+            this.precioTextBox.Size = new System.Drawing.Size(58, 20);
             this.precioTextBox.TabIndex = 3;
             // 
             // fotoPictureBox
@@ -383,9 +396,9 @@
             this.especialidadIdComboBox.DisplayMember = "Especialidad";
             this.especialidadIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.especialidadIdComboBox.FormattingEnabled = true;
-            this.especialidadIdComboBox.Location = new System.Drawing.Point(127, 99);
+            this.especialidadIdComboBox.Location = new System.Drawing.Point(147, 99);
             this.especialidadIdComboBox.Name = "especialidadIdComboBox";
-            this.especialidadIdComboBox.Size = new System.Drawing.Size(279, 21);
+            this.especialidadIdComboBox.Size = new System.Drawing.Size(238, 21);
             this.especialidadIdComboBox.TabIndex = 2;
             this.especialidadIdComboBox.ValueMember = "Id";
             // 
@@ -393,7 +406,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 235);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(628, 221);
             this.Controls.Add(this.especialidadIdComboBox);
             this.Controls.Add(this.listaDoctoresBindingNavigator);
             this.Controls.Add(this.btnDeleteFoto);

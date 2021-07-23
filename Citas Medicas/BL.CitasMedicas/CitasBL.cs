@@ -10,19 +10,26 @@ namespace BL.CitasMedicas
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string MotivoCita { get; set; }
+        public int MotivoId { get; set; }
+        public Tipo MotivoCita { get; set; }
         public int DoctorId { get; set; }
         public Doctor Doctor { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public double Precio { get; set; }
+
+        public Paciente()
+        {
+            Fecha = DateTime.Now;
+            Hora = "07:00";
+        }  
     }
-    public class CitasBL
+    public class CitasBl
     {
         Contexto _contexto;
         public BindingList<Paciente> ListaPacientes { get; set; }
 
-        public CitasBL()
+        public CitasBl()
         {
             _contexto = new Contexto();
             ListaPacientes = new BindingList<Paciente>();
@@ -73,31 +80,19 @@ namespace BL.CitasMedicas
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if (paciente.Precio <= 0)
+            if (paciente == null)
             {
-                resultado.Mensaje = "Ingrese un pecio de la cita";
+                resultado.Mensaje = "Ingrese un Paciente";
                 resultado.Exitoso = false;
-            }
 
-            if (string.IsNullOrEmpty(paciente.Hora) == true)
-            {
-                resultado.Mensaje = "Ingrese una hora de cita";
-                resultado.Exitoso = false;
             }
-
-            if (string.IsNullOrEmpty(paciente.Fecha) == true)
-            {
-                resultado.Mensaje = "Ingrese una fecha para la cita";
-                resultado.Exitoso = false;
-            }
-
             if (paciente.DoctorId == 0)
             {
                 resultado.Mensaje = "Ingrese un Medico al paciente";
                 resultado.Exitoso = false;
             }
 
-            if (string.IsNullOrEmpty(paciente.MotivoCita) == true)
+            if (paciente.MotivoId == 0)
             {
                 resultado.Mensaje = "Ingrese un nombre Motivo de Cita";
                 resultado.Exitoso = false;

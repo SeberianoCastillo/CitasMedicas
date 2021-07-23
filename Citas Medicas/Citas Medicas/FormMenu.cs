@@ -71,6 +71,7 @@ namespace Citas_Medicas
         {
             var formlogin = new FormLogin();
             formlogin.MdiParent = this;
+            formlogin.TopMost = TopMost;
             formlogin.Show();
         }
 
@@ -91,9 +92,21 @@ namespace Citas_Medicas
 
         private void listaDeDoctoresYEspecialidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void mantenimientoDoctoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             var formListaDoctoresYEspecialidades = new FormDoctores();
             formListaDoctoresYEspecialidades.MdiParent = this;
             formListaDoctoresYEspecialidades.Show();
+        }
+
+        private void facturarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new FormFactura();
+            formFactura.MdiParent = this;
+            formFactura.Show();
         }
     }
 }

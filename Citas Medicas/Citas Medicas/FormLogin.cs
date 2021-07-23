@@ -48,6 +48,13 @@ namespace Citas_Medicas
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrecta");
+                button1.Enabled = true;
+                button1.Text = "Aceptar";
+                textBox1.Clear();  
+                textBox2.Clear();
+                textBox1.Focus();
+
+                Application.DoEvents();
             }
         }
 

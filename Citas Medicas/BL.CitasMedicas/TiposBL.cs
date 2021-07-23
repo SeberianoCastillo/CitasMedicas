@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 
 namespace BL.CitasMedicas
 {
+    public class Tipo
+    {
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
+    }
     public class TiposBl
     {
         private Contexto _contexto;
@@ -30,11 +35,4 @@ namespace BL.CitasMedicas
             return ListaTipos;
         }
     }
-
-    public class Tipo
-    {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
-    }
-
 }

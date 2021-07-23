@@ -91,6 +91,12 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBuscarCitaProgramada.resx">
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDoctores.resx">
       <DependentUpon>FormDoctores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -118,14 +127,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\BL.CitasMedicas.CitasBL.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.CitasBl.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Contexto.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.DatosdeInicio.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Doctor.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.DoctoresBl.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Especialidades.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.EspecialidadesBL.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.Factura.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.FacturaDetalle.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Paciente.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.Productos.datasource" />
+    <None Include="Properties\DataSources\BL.CitasMedicas.ProductosBL.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.SeguridadBL.datasource" />
     <None Include="Properties\DataSources\BL.CitasMedicas.Tipo.datasource" />

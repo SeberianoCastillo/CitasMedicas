@@ -6,17 +6,22 @@ namespace Citas_Medicas
 {
     public partial class FormCrearCitaMedica : Form
     {
-        private CitasBL _citas;
+        private CitasBl _citas;
         private DoctoresBl _doctores;
+        private TiposBl _tipos;
+
         public FormCrearCitaMedica()
         {
             InitializeComponent();
 
-            _citas = new CitasBL();
+            _citas = new CitasBl();
             listaPacientesBindingSource.DataSource = _citas.ObtenerCitas();
 
             _doctores = new DoctoresBl();
             listaDoctoresBindingSource.DataSource = _doctores.ObtenerDoctores();
+
+            _tipos = new TiposBl();
+            listaTiposBindingSource.DataSource = _tipos.ObtenerTipos();
         }
 
         private void listaPacientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -95,9 +100,5 @@ namespace Citas_Medicas
             _citas.CancelarCambios();
         }
 
-        private void FormCrearCitaMedica_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

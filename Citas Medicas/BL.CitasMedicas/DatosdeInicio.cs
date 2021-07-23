@@ -50,18 +50,18 @@ namespace BL.CitasMedicas
 
             //Tipos de Consulta
             var tipo1 = new Tipo();
-            tipo1.Descripcion = "General";
+            tipo1.Descripcion = "CONSULTA MEDICA GENERAL";
             contexto.Tipos.Add(tipo1);
 
             var tipo2 = new Tipo();
-            tipo2.Descripcion = "Emergencia";
+            tipo2.Descripcion = "EMERGENCIA";
             contexto.Tipos.Add(tipo2);
 
             var tipo3 = new Tipo();
-            tipo3.Descripcion = "Retiro/Lectura Exámenes";
+            tipo3.Descripcion = "RETIRO/ LECTURA EXÁMENES";
             contexto.Tipos.Add(tipo3);
 
-            //Tipos de Consulta
+            //Usuarios
             var usuario1 = new Usuario();
             usuario1.Id = 1;
             usuario1.NombreUsuario = "admin";
@@ -74,7 +74,35 @@ namespace BL.CitasMedicas
             usuario2.Contrasena = "123";
             contexto.Usuarios.Add(usuario2);
 
+            //Productos
+            var productos1 = new Productos();
+            productos1.Id = 1;
+            productos1.Descripcion = "CONSULTA MEDICA GENERAL";
+            productos1.Precio = 700;
+            contexto.Productos.Add(productos1);
+
+            var productos2 = new Productos();
+            productos2.Id = 2;
+            productos2.Descripcion = "ATENCION DE EMERGENCIA";
+            productos2.Precio = 1500;
+            contexto.Productos.Add(productos2);
+
+            var productos3 = new Productos();
+            productos3.Id = 3;
+            productos3.Descripcion = "LECTURA EXAMENES POR ESPECIALISTA";
+            productos3.Precio = 350;
+            contexto.Productos.Add(productos3);
+
+            var productos4 = new Productos();
+            productos4.Id = 4;
+            productos4.Descripcion = "OTROS SERVICIOS PRESTADOS";
+            productos4.Precio = 500;
+            contexto.Productos.Add(productos4);
+
+
             base.Seed(contexto);
+
+
         }
     }
 }
