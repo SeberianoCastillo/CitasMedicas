@@ -79,11 +79,6 @@ namespace Citas_Medicas
             _facturaBl.CancelarCambios();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            AgregarDetalle();
-        }
-
         private void AgregarDetalle()
         {
             var factura = (Factura)listaFacturasBindingSource.Current;
@@ -104,15 +99,7 @@ namespace Citas_Medicas
             }
         }
 
-        private void FormFactura_Load(object sender, EventArgs e)
-        {
-            CargarBotones();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            CargarBotones();
-        }
 
         private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -152,13 +139,33 @@ namespace Citas_Medicas
                 MessageBox.Show("Ocurrio un error al anular factura");
             }
         }
+        private void listaFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            VerAnular();
+        }
 
+        private void VerAnular()
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+
+            if (factura != null && factura.Id != 0 && factura.Activo == false)
+            {
+                lblAnulado.Visible = true;
+            }
+            else
+            {
+                lblAnulado.Visible = false;
+            }
+        }
+        private void FormFactura_Load(object sender, EventArgs e)
+        {
+            CargarBotones();
+        }
         private void CargarBotones()
         {
             int contador = 1, x = 10, y = 10, nBotones = 1;
             foreach (var producto in _productosBl.ListaProductos)
             {
-
                 Button boton = new Button();
                 boton.BackColor = Color.DarkSlateGray;
                 boton.FlatAppearance.BorderSize = 0;
@@ -197,50 +204,37 @@ namespace Citas_Medicas
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            var botonEnvia = (Button)sender;
-            var id = Convert.ToInt32(botonEnvia.Tag);
-            foreach (var producto in _productosBl.ListaProductos)
+            var facturaActual = (Factura)listaFacturasBindingSource.Current;
+            if (facturaActual != null)
             {
-                if (producto.Id == id)
+                var botonEnvia = (Button)sender;
+                var id = Convert.ToInt32(botonEnvia.Tag);
+                foreach (var producto in _productosBl.ListaProductos)
                 {
+                    if (producto.Id == id)
+                    {
 
-                    //MessageBox.Show(producto.Descripcion);
-                    AgregarDetalle();
+                        //MessageBox.Show(producto.Descripcion);
+                        AgregarDetalle();
 
-                    var factura = (Factura)listaFacturasBindingSource.Current;
-                    int prod = factura.Id;
+                        var factura = (Factura)listaFacturasBindingSource.Current;
+                        int prod = factura.Id;
 
-                    facturaDetalleDataGridView.Rows[facturaDetalleDataGridView.RowCount-1].Cells[0].Value = producto.Id;
+                        facturaDetalleDataGridView.Rows[facturaDetalleDataGridView.RowCount-1].Cells[0].Value = producto.Id;
 
-                    _facturaBl.CalcularFactura(factura);
+                        _facturaBl.CalcularFactura(factura);
 
-                    listaFacturasBindingSource.ResetBindings(false);
-                    facturaDetalleBindingSource.ResetBindings(false);
+                        listaFacturasBindingSource.ResetBindings(false);
+                        facturaDetalleBindingSource.ResetBindings(false);
 
-                    DeshabilitarHabilitarBotones(false);
+                        DeshabilitarHabilitarBotones(false);
 
-                    return;
+                        return;
+                    }
                 }
             }
+
         }
 
-        private void listaFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-            VerAnular();
-        }
-
-        private void VerAnular()
-        {
-            var factura = (Factura)listaFacturasBindingSource.Current;
-
-            if (factura != null && factura.Id != 0 && factura.Activo == false)
-            {
-                lblAnulado.Visible = true;
-            }
-            else
-            {
-                lblAnulado.Visible = false;
-            }
-        }
     }
 }

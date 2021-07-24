@@ -68,13 +68,12 @@
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.pacienteIdComboBox = new System.Windows.Forms.ComboBox();
             this.facturaDetalleDataGridView = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.lblAnulado = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.lblAnulado = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -95,7 +94,7 @@
             // 
             activoLabel.AutoSize = true;
             activoLabel.ForeColor = System.Drawing.Color.Bisque;
-            activoLabel.Location = new System.Drawing.Point(206, 66);
+            activoLabel.Location = new System.Drawing.Point(240, 66);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(47, 13);
             activoLabel.TabIndex = 21;
@@ -105,7 +104,7 @@
             // 
             fechaLabel.AutoSize = true;
             fechaLabel.ForeColor = System.Drawing.Color.Bisque;
-            fechaLabel.Location = new System.Drawing.Point(33, 41);
+            fechaLabel.Location = new System.Drawing.Point(67, 41);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(46, 13);
             fechaLabel.TabIndex = 23;
@@ -115,7 +114,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.ForeColor = System.Drawing.Color.Bisque;
-            idLabel.Location = new System.Drawing.Point(57, 66);
+            idLabel.Location = new System.Drawing.Point(91, 66);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(22, 13);
             idLabel.TabIndex = 25;
@@ -137,9 +136,9 @@
             pacienteIdLabel.ForeColor = System.Drawing.Color.Bisque;
             pacienteIdLabel.Location = new System.Drawing.Point(3, 99);
             pacienteIdLabel.Name = "pacienteIdLabel";
-            pacienteIdLabel.Size = new System.Drawing.Size(76, 13);
+            pacienteIdLabel.Size = new System.Drawing.Size(110, 13);
             pacienteIdLabel.TabIndex = 29;
-            pacienteIdLabel.Text = "Paciente Id:";
+            pacienteIdLabel.Text = "Paciente/ Cliente:";
             // 
             // subtotalLabel
             // 
@@ -340,7 +339,7 @@
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
-            this.activoCheckBox.Location = new System.Drawing.Point(259, 61);
+            this.activoCheckBox.Location = new System.Drawing.Point(293, 61);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(26, 24);
             this.activoCheckBox.TabIndex = 22;
@@ -349,7 +348,7 @@
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(85, 35);
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(119, 35);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(251, 20);
             this.fechaDateTimePicker.TabIndex = 0;
@@ -358,7 +357,7 @@
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
             this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(85, 62);
+            this.idTextBox.Location = new System.Drawing.Point(119, 62);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(61, 20);
             this.idTextBox.TabIndex = 1;
@@ -402,7 +401,7 @@
             this.pacienteIdComboBox.DisplayMember = "Nombre";
             this.pacienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.pacienteIdComboBox.FormattingEnabled = true;
-            this.pacienteIdComboBox.Location = new System.Drawing.Point(85, 91);
+            this.pacienteIdComboBox.Location = new System.Drawing.Point(119, 93);
             this.pacienteIdComboBox.Name = "pacienteIdComboBox";
             this.pacienteIdComboBox.Size = new System.Drawing.Size(251, 21);
             this.pacienteIdComboBox.TabIndex = 2;
@@ -452,40 +451,6 @@
             this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
             this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(482, 91);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(31, 23);
-            this.btnAgregar.TabIndex = 36;
-            this.btnAgregar.Text = "+";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Visible = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(515, 91);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(31, 23);
-            this.btnRemover.TabIndex = 37;
-            this.btnRemover.Text = "-";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // lblAnulado
-            // 
-            this.lblAnulado.AutoSize = true;
-            this.lblAnulado.BackColor = System.Drawing.Color.Red;
-            this.lblAnulado.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnulado.ForeColor = System.Drawing.Color.Bisque;
-            this.lblAnulado.Location = new System.Drawing.Point(395, 41);
-            this.lblAnulado.Name = "lblAnulado";
-            this.lblAnulado.Size = new System.Drawing.Size(151, 31);
-            this.lblAnulado.TabIndex = 38;
-            this.lblAnulado.Text = "ANULADO";
-            this.lblAnulado.Visible = false;
-            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -516,6 +481,29 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Total";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(515, 91);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(31, 23);
+            this.btnRemover.TabIndex = 37;
+            this.btnRemover.Text = "-";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // lblAnulado
+            // 
+            this.lblAnulado.AutoSize = true;
+            this.lblAnulado.BackColor = System.Drawing.Color.Red;
+            this.lblAnulado.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnulado.ForeColor = System.Drawing.Color.Bisque;
+            this.lblAnulado.Location = new System.Drawing.Point(389, 42);
+            this.lblAnulado.Name = "lblAnulado";
+            this.lblAnulado.Size = new System.Drawing.Size(151, 31);
+            this.lblAnulado.TabIndex = 38;
+            this.lblAnulado.Text = "ANULADO";
+            this.lblAnulado.Visible = false;
+            // 
             // FormFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -524,7 +512,6 @@
             this.ClientSize = new System.Drawing.Size(978, 410);
             this.Controls.Add(this.lblAnulado);
             this.Controls.Add(this.btnRemover);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.facturaDetalleDataGridView);
             this.Controls.Add(this.pacienteIdComboBox);
             this.Controls.Add(activoLabel);
@@ -593,7 +580,6 @@
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.ComboBox pacienteIdComboBox;
         private System.Windows.Forms.DataGridView facturaDetalleDataGridView;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Label lblAnulado;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;

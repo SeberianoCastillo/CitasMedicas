@@ -35,7 +35,7 @@ namespace BL.CitasMedicas
             return ListaProductos;
         }
 
-        private Resultado ValidarDr(Productos productos)
+        private Resultado Validar(Productos productos)
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
@@ -55,7 +55,7 @@ namespace BL.CitasMedicas
 
             if (string.IsNullOrEmpty(productos.Descripcion) == true)
             {
-                resultado.Mensaje = "Ingrese un nombre de doctor";
+                resultado.Mensaje = "Ingrese una descripción";
                 resultado.Exitoso = false;
             }
             return resultado;
@@ -70,9 +70,9 @@ namespace BL.CitasMedicas
             }
         }
 
-        public Resultado GuardarDoctor(Productos productos)
+        public Resultado GuardarProducto(Productos productos)
         {
-            var resultado = ValidarDr(productos);
+            var resultado = Validar(productos);
             if (resultado.Exitoso == false)
             {
                 return resultado;

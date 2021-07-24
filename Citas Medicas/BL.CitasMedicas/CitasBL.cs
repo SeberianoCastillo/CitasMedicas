@@ -86,17 +86,6 @@ namespace BL.CitasMedicas
                 resultado.Exitoso = false;
 
             }
-            if (paciente.DoctorId == 0)
-            {
-                resultado.Mensaje = "Ingrese un Medico al paciente";
-                resultado.Exitoso = false;
-            }
-
-            if (paciente.MotivoId == 0)
-            {
-                resultado.Mensaje = "Ingrese un nombre Motivo de Cita";
-                resultado.Exitoso = false;
-            }
 
             if (string.IsNullOrEmpty(paciente.Nombre) ==  true)
             {

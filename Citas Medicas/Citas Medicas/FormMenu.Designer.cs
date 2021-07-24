@@ -43,13 +43,16 @@
             this.buscarCitasProgramadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.menuStrip1.BackColor = System.Drawing.Color.Bisque;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
             this.citaMedicaToolStripMenuItem,
             this.facturaciónToolStripMenuItem,
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem,
@@ -60,7 +63,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(778, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked_1);
             // 
             // citaMedicaToolStripMenuItem
             // 
@@ -97,7 +99,7 @@
             this.facturarToolStripMenuItem.BackColor = System.Drawing.Color.MediumAquamarine;
             this.facturarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturarToolStripMenuItem.Image")));
             this.facturarToolStripMenuItem.Name = "facturarToolStripMenuItem";
-            this.facturarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.facturarToolStripMenuItem.Text = "Facturar";
             this.facturarToolStripMenuItem.Click += new System.EventHandler(this.facturarToolStripMenuItem_Click);
             // 
@@ -112,7 +114,6 @@
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Name = "listaDeDoctoresYEspecialidadesToolStripMenuItem";
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(170, 20);
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Text = "Doctores y Especialidades";
-            this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Click += new System.EventHandler(this.listaDeDoctoresYEspecialidadesToolStripMenuItem_Click);
             // 
             // doctoresToolStripMenuItem
             // 
@@ -170,7 +171,7 @@
             // 
             // registrarseToolStripMenuItem
             // 
-            this.registrarseToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
+            this.registrarseToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.registrarseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem});
             this.registrarseToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
@@ -181,19 +182,40 @@
             // 
             // loginToolStripMenuItem
             // 
-            this.loginToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
-            this.loginToolStripMenuItem.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.loginToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.loginToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.loginToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loginToolStripMenuItem.Image")));
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.DimGray;
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.Peru;
+            this.archivoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("archivoToolStripMenuItem.Image")));
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.BackColor = System.Drawing.Color.DimGray;
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Peru;
+            this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(778, 383);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -227,5 +249,7 @@
         private System.Windows.Forms.ToolStripMenuItem mantenimientoEspecialidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

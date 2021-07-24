@@ -81,11 +81,6 @@ namespace BL.CitasMedicas
                 resultado.Exitoso = false;
             }
 
-            //if (factura == null)
-            //{
-            //    resultado.Mensaje = "Agregue una factura para poder salvar";
-            //    resultado.Exitoso = false;
-            //}
             if (factura.Activo == false)
             {
                 resultado.Mensaje = "La factura está anulada y no se pueden hacer cambios";
