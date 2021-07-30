@@ -66,5 +66,19 @@ namespace Citas_Medicas
         {
             Application.Exit();
         }
+
+        private void buscarCitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new FormBuscarCitaProgramada();
+            formFactura.MdiParent = this;
+            formFactura.Show();
+        }
+
+        private void reporteDoctoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new FormReporteDoctores();
+            formFactura.MdiParent = this;
+            formFactura.Show();
+        }
     }
 }

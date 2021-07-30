@@ -84,7 +84,7 @@
             activoLabel.AutoSize = true;
             activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             activoLabel.ForeColor = System.Drawing.Color.Bisque;
-            activoLabel.Location = new System.Drawing.Point(12, 173);
+            activoLabel.Location = new System.Drawing.Point(6, 157);
             activoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(47, 13);
@@ -96,7 +96,7 @@
             disponibilidadLabel.AutoSize = true;
             disponibilidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             disponibilidadLabel.ForeColor = System.Drawing.Color.Bisque;
-            disponibilidadLabel.Location = new System.Drawing.Point(11, 150);
+            disponibilidadLabel.Location = new System.Drawing.Point(5, 134);
             disponibilidadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             disponibilidadLabel.Name = "disponibilidadLabel";
             disponibilidadLabel.Size = new System.Drawing.Size(133, 13);
@@ -108,7 +108,7 @@
             especialidadLabel.AutoSize = true;
             especialidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             especialidadLabel.ForeColor = System.Drawing.Color.Bisque;
-            especialidadLabel.Location = new System.Drawing.Point(11, 100);
+            especialidadLabel.Location = new System.Drawing.Point(5, 84);
             especialidadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             especialidadLabel.Name = "especialidadLabel";
             especialidadLabel.Size = new System.Drawing.Size(83, 13);
@@ -119,7 +119,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.ForeColor = System.Drawing.Color.Bisque;
-            idLabel.Location = new System.Drawing.Point(12, 49);
+            idLabel.Location = new System.Drawing.Point(6, 33);
             idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
@@ -131,7 +131,7 @@
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreLabel.ForeColor = System.Drawing.Color.Bisque;
-            nombreLabel.Location = new System.Drawing.Point(11, 78);
+            nombreLabel.Location = new System.Drawing.Point(5, 62);
             nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(54, 13);
@@ -143,7 +143,7 @@
             precioLabel.AutoSize = true;
             precioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             precioLabel.ForeColor = System.Drawing.Color.Bisque;
-            precioLabel.Location = new System.Drawing.Point(11, 127);
+            precioLabel.Location = new System.Drawing.Point(5, 111);
             precioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(94, 13);
@@ -155,7 +155,7 @@
             fotoLabel.AutoSize = true;
             fotoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fotoLabel.ForeColor = System.Drawing.Color.Bisque;
-            fotoLabel.Location = new System.Drawing.Point(417, 31);
+            fotoLabel.Location = new System.Drawing.Point(391, 31);
             fotoLabel.Name = "fotoLabel";
             fotoLabel.Size = new System.Drawing.Size(36, 13);
             fotoLabel.TabIndex = 13;
@@ -164,7 +164,7 @@
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaDoctoresBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(147, 175);
+            this.activoCheckBox.Location = new System.Drawing.Point(141, 159);
             this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(238, 16);
@@ -174,7 +174,7 @@
             // disponibilidadTextBox
             // 
             this.disponibilidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Disponibilidad", true));
-            this.disponibilidadTextBox.Location = new System.Drawing.Point(147, 150);
+            this.disponibilidadTextBox.Location = new System.Drawing.Point(141, 134);
             this.disponibilidadTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.disponibilidadTextBox.Name = "disponibilidadTextBox";
             this.disponibilidadTextBox.Size = new System.Drawing.Size(57, 20);
@@ -183,7 +183,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(147, 47);
+            this.idTextBox.Location = new System.Drawing.Point(141, 31);
             this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
@@ -193,7 +193,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(146, 74);
+            this.nombreTextBox.Location = new System.Drawing.Point(140, 58);
             this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(240, 20);
@@ -202,7 +202,7 @@
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(146, 125);
+            this.precioTextBox.Location = new System.Drawing.Point(140, 109);
             this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(58, 20);
@@ -212,7 +212,7 @@
             // 
             this.fotoPictureBox.BackColor = System.Drawing.Color.Silver;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaDoctoresBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(420, 47);
+            this.fotoPictureBox.Location = new System.Drawing.Point(394, 47);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(184, 139);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,21 +221,23 @@
             // 
             // btnAddFoto
             // 
-            this.btnAddFoto.Location = new System.Drawing.Point(420, 192);
+            this.btnAddFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFoto.Location = new System.Drawing.Point(394, 192);
             this.btnAddFoto.Name = "btnAddFoto";
-            this.btnAddFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnAddFoto.Size = new System.Drawing.Size(25, 25);
             this.btnAddFoto.TabIndex = 6;
-            this.btnAddFoto.Text = "Agregar Foto";
+            this.btnAddFoto.Text = "+";
             this.btnAddFoto.UseVisualStyleBackColor = true;
             this.btnAddFoto.Click += new System.EventHandler(this.btnAddFoto_Click);
             // 
             // btnDeleteFoto
             // 
-            this.btnDeleteFoto.Location = new System.Drawing.Point(529, 192);
+            this.btnDeleteFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteFoto.Location = new System.Drawing.Point(425, 192);
             this.btnDeleteFoto.Name = "btnDeleteFoto";
-            this.btnDeleteFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteFoto.Size = new System.Drawing.Size(25, 25);
             this.btnDeleteFoto.TabIndex = 7;
-            this.btnDeleteFoto.Text = "Remover Foto";
+            this.btnDeleteFoto.Text = "-";
             this.btnDeleteFoto.UseVisualStyleBackColor = true;
             this.btnDeleteFoto.Click += new System.EventHandler(this.btnDeleteFoto_Click);
             // 
@@ -377,7 +379,7 @@
             this.listaDoctoresBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaDoctoresBindingNavigator.Name = "listaDoctoresBindingNavigator";
             this.listaDoctoresBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaDoctoresBindingNavigator.Size = new System.Drawing.Size(628, 25);
+            this.listaDoctoresBindingNavigator.Size = new System.Drawing.Size(584, 25);
             this.listaDoctoresBindingNavigator.TabIndex = 8;
             this.listaDoctoresBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -396,7 +398,7 @@
             this.especialidadIdComboBox.DisplayMember = "Especialidad";
             this.especialidadIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.especialidadIdComboBox.FormattingEnabled = true;
-            this.especialidadIdComboBox.Location = new System.Drawing.Point(147, 99);
+            this.especialidadIdComboBox.Location = new System.Drawing.Point(141, 83);
             this.especialidadIdComboBox.Name = "especialidadIdComboBox";
             this.especialidadIdComboBox.Size = new System.Drawing.Size(238, 21);
             this.especialidadIdComboBox.TabIndex = 2;
@@ -407,7 +409,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(628, 221);
+            this.ClientSize = new System.Drawing.Size(584, 221);
             this.Controls.Add(this.especialidadIdComboBox);
             this.Controls.Add(this.listaDoctoresBindingNavigator);
             this.Controls.Add(this.btnDeleteFoto);
