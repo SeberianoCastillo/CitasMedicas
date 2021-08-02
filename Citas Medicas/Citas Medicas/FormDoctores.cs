@@ -143,6 +143,11 @@ namespace Citas_Medicas
         {
 
         }
+
+        private void especialidadIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

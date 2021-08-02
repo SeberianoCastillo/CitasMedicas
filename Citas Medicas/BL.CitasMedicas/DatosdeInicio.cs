@@ -26,7 +26,7 @@ namespace BL.CitasMedicas
 
             var especialidad3 = new Especialidades();
             especialidad3.Id = 3;
-            especialidad3.Especialidad = "Prediatría";
+            especialidad3.Especialidad = "Pediatría";
             contexto.Especialidades.Add(especialidad3);
 
             //Medicos

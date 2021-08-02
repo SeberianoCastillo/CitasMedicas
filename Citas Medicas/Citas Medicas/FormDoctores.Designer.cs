@@ -403,6 +403,7 @@
             this.especialidadIdComboBox.Size = new System.Drawing.Size(238, 21);
             this.especialidadIdComboBox.TabIndex = 2;
             this.especialidadIdComboBox.ValueMember = "Id";
+            this.especialidadIdComboBox.SelectedIndexChanged += new System.EventHandler(this.especialidadIdComboBox_SelectedIndexChanged);
             // 
             // FormDoctores
             // 
