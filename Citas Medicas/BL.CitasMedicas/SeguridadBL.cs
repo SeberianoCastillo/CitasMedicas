@@ -13,17 +13,17 @@ namespace BL.CitasMedicas
         {
                 _contexto = new Contexto(); 
         }
-       public bool Autorizar(string usuario, string contrasena)
+       public Usuario Autorizar(string usuario, string contrasena)
        {
             var usuarios = _contexto.Usuarios.ToList();
            foreach (var usuarioDB in usuarios)
            {
                if (usuario == usuarioDB.NombreUsuario && contrasena == usuarioDB.Contrasena)
                {
-                   return true;
+                   return usuarioDB;
                }
            }
-            return false;
+            return null;
         }
 
     }

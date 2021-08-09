@@ -64,6 +64,8 @@
             this.listaEspecialidadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.especialidadIdComboBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             activoLabel = new System.Windows.Forms.Label();
             disponibilidadLabel = new System.Windows.Forms.Label();
             especialidadLabel = new System.Windows.Forms.Label();
@@ -84,147 +86,152 @@
             activoLabel.AutoSize = true;
             activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             activoLabel.ForeColor = System.Drawing.Color.Bisque;
-            activoLabel.Location = new System.Drawing.Point(6, 157);
-            activoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            activoLabel.Location = new System.Drawing.Point(12, 320);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(47, 13);
+            activoLabel.Size = new System.Drawing.Size(67, 20);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
+            activoLabel.Click += new System.EventHandler(this.activoLabel_Click);
             // 
             // disponibilidadLabel
             // 
             disponibilidadLabel.AutoSize = true;
             disponibilidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             disponibilidadLabel.ForeColor = System.Drawing.Color.Bisque;
-            disponibilidadLabel.Location = new System.Drawing.Point(5, 134);
-            disponibilidadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            disponibilidadLabel.Location = new System.Drawing.Point(11, 284);
             disponibilidadLabel.Name = "disponibilidadLabel";
-            disponibilidadLabel.Size = new System.Drawing.Size(133, 13);
+            disponibilidadLabel.Size = new System.Drawing.Size(198, 20);
             disponibilidadLabel.TabIndex = 3;
             disponibilidadLabel.Text = "Disponibilidad por dia:";
+            disponibilidadLabel.Click += new System.EventHandler(this.disponibilidadLabel_Click);
             // 
             // especialidadLabel
             // 
             especialidadLabel.AutoSize = true;
             especialidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             especialidadLabel.ForeColor = System.Drawing.Color.Bisque;
-            especialidadLabel.Location = new System.Drawing.Point(5, 84);
-            especialidadLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            especialidadLabel.Location = new System.Drawing.Point(11, 207);
             especialidadLabel.Name = "especialidadLabel";
-            especialidadLabel.Size = new System.Drawing.Size(83, 13);
+            especialidadLabel.Size = new System.Drawing.Size(122, 20);
             especialidadLabel.TabIndex = 5;
             especialidadLabel.Text = "Especialidad:";
+            especialidadLabel.Click += new System.EventHandler(this.especialidadLabel_Click);
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
             idLabel.ForeColor = System.Drawing.Color.Bisque;
-            idLabel.Location = new System.Drawing.Point(6, 33);
-            idLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idLabel.Location = new System.Drawing.Point(12, 129);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
+            idLabel.Click += new System.EventHandler(this.idLabel_Click);
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreLabel.ForeColor = System.Drawing.Color.Bisque;
-            nombreLabel.Location = new System.Drawing.Point(5, 62);
-            nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nombreLabel.Location = new System.Drawing.Point(11, 173);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(54, 13);
+            nombreLabel.Size = new System.Drawing.Size(80, 20);
             nombreLabel.TabIndex = 9;
             nombreLabel.Text = "Nombre:";
+            nombreLabel.Click += new System.EventHandler(this.nombreLabel_Click);
             // 
             // precioLabel
             // 
             precioLabel.AutoSize = true;
             precioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             precioLabel.ForeColor = System.Drawing.Color.Bisque;
-            precioLabel.Location = new System.Drawing.Point(5, 111);
-            precioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            precioLabel.Location = new System.Drawing.Point(11, 249);
             precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(94, 13);
+            precioLabel.Size = new System.Drawing.Size(139, 20);
             precioLabel.TabIndex = 11;
             precioLabel.Text = "Precio por cita:";
+            precioLabel.Click += new System.EventHandler(this.precioLabel_Click);
             // 
             // fotoLabel
             // 
             fotoLabel.AutoSize = true;
             fotoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fotoLabel.ForeColor = System.Drawing.Color.Bisque;
-            fotoLabel.Location = new System.Drawing.Point(391, 31);
+            fotoLabel.Location = new System.Drawing.Point(586, 110);
+            fotoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fotoLabel.Name = "fotoLabel";
-            fotoLabel.Size = new System.Drawing.Size(36, 13);
+            fotoLabel.Size = new System.Drawing.Size(52, 20);
             fotoLabel.TabIndex = 13;
             fotoLabel.Text = "Foto:";
+            fotoLabel.Click += new System.EventHandler(this.fotoLabel_Click);
             // 
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaDoctoresBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(141, 159);
-            this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.activoCheckBox.Location = new System.Drawing.Point(215, 323);
             this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(238, 16);
+            this.activoCheckBox.Size = new System.Drawing.Size(357, 25);
             this.activoCheckBox.TabIndex = 5;
             this.activoCheckBox.UseVisualStyleBackColor = true;
+            this.activoCheckBox.CheckedChanged += new System.EventHandler(this.activoCheckBox_CheckedChanged);
             // 
             // disponibilidadTextBox
             // 
             this.disponibilidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Disponibilidad", true));
-            this.disponibilidadTextBox.Location = new System.Drawing.Point(141, 134);
-            this.disponibilidadTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.disponibilidadTextBox.Location = new System.Drawing.Point(215, 284);
             this.disponibilidadTextBox.Name = "disponibilidadTextBox";
-            this.disponibilidadTextBox.Size = new System.Drawing.Size(57, 20);
+            this.disponibilidadTextBox.Size = new System.Drawing.Size(84, 26);
             this.disponibilidadTextBox.TabIndex = 4;
+            this.disponibilidadTextBox.TextChanged += new System.EventHandler(this.disponibilidadTextBox_TextChanged);
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(141, 31);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.idTextBox.Location = new System.Drawing.Point(215, 126);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(40, 20);
+            this.idTextBox.Size = new System.Drawing.Size(58, 26);
             this.idTextBox.TabIndex = 0;
+            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(140, 58);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nombreTextBox.Location = new System.Drawing.Point(213, 167);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(240, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(358, 26);
             this.nombreTextBox.TabIndex = 1;
+            this.nombreTextBox.TextChanged += new System.EventHandler(this.nombreTextBox_TextChanged);
             // 
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaDoctoresBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(140, 109);
-            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.precioTextBox.Location = new System.Drawing.Point(213, 246);
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(58, 20);
+            this.precioTextBox.Size = new System.Drawing.Size(85, 26);
             this.precioTextBox.TabIndex = 3;
+            this.precioTextBox.TextChanged += new System.EventHandler(this.precioTextBox_TextChanged);
             // 
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.Color.Silver;
             this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaDoctoresBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fotoPictureBox.Location = new System.Drawing.Point(394, 47);
+            this.fotoPictureBox.Location = new System.Drawing.Point(590, 144);
+            this.fotoPictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fotoPictureBox.Name = "fotoPictureBox";
-            this.fotoPictureBox.Size = new System.Drawing.Size(184, 139);
+            this.fotoPictureBox.Size = new System.Drawing.Size(276, 214);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 14;
             this.fotoPictureBox.TabStop = false;
+            this.fotoPictureBox.Click += new System.EventHandler(this.fotoPictureBox_Click);
             // 
             // btnAddFoto
             // 
             this.btnAddFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFoto.Location = new System.Drawing.Point(394, 192);
+            this.btnAddFoto.Location = new System.Drawing.Point(590, 368);
+            this.btnAddFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddFoto.Name = "btnAddFoto";
-            this.btnAddFoto.Size = new System.Drawing.Size(25, 25);
+            this.btnAddFoto.Size = new System.Drawing.Size(38, 38);
             this.btnAddFoto.TabIndex = 6;
             this.btnAddFoto.Text = "+";
             this.btnAddFoto.UseVisualStyleBackColor = true;
@@ -233,9 +240,10 @@
             // btnDeleteFoto
             // 
             this.btnDeleteFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFoto.Location = new System.Drawing.Point(425, 192);
+            this.btnDeleteFoto.Location = new System.Drawing.Point(636, 368);
+            this.btnDeleteFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteFoto.Name = "btnDeleteFoto";
-            this.btnDeleteFoto.Size = new System.Drawing.Size(25, 25);
+            this.btnDeleteFoto.Size = new System.Drawing.Size(38, 38);
             this.btnDeleteFoto.TabIndex = 7;
             this.btnDeleteFoto.Text = "-";
             this.btnDeleteFoto.UseVisualStyleBackColor = true;
@@ -251,7 +259,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem
@@ -260,34 +268,34 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(73, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(57, 28);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -295,7 +303,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
             // 
             // bindingNavigatorMoveLastItem
@@ -304,13 +312,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -318,7 +326,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
@@ -328,7 +336,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
@@ -337,7 +345,7 @@
             this.listaPacientesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.listaPacientesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaPacientesBindingNavigatorSaveItem.Image")));
             this.listaPacientesBindingNavigatorSaveItem.Name = "listaPacientesBindingNavigatorSaveItem";
-            this.listaPacientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.listaPacientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.listaPacientesBindingNavigatorSaveItem.Text = "Guardar datos";
             this.listaPacientesBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaPacientesBindingNavigatorSaveItem_Click);
             // 
@@ -347,7 +355,7 @@
             this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
             this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(82, 29);
             this.toolStripButtonCancelar.Text = "Cancelar";
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
@@ -358,6 +366,7 @@
             this.listaDoctoresBindingNavigator.BindingSource = this.listaDoctoresBindingSource;
             this.listaDoctoresBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaDoctoresBindingNavigator.DeleteItem = null;
+            this.listaDoctoresBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.listaDoctoresBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -378,8 +387,9 @@
             this.listaDoctoresBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.listaDoctoresBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaDoctoresBindingNavigator.Name = "listaDoctoresBindingNavigator";
+            this.listaDoctoresBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.listaDoctoresBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaDoctoresBindingNavigator.Size = new System.Drawing.Size(584, 25);
+            this.listaDoctoresBindingNavigator.Size = new System.Drawing.Size(934, 31);
             this.listaDoctoresBindingNavigator.TabIndex = 8;
             this.listaDoctoresBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -398,19 +408,41 @@
             this.especialidadIdComboBox.DisplayMember = "Especialidad";
             this.especialidadIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.especialidadIdComboBox.FormattingEnabled = true;
-            this.especialidadIdComboBox.Location = new System.Drawing.Point(141, 83);
+            this.especialidadIdComboBox.Location = new System.Drawing.Point(215, 206);
+            this.especialidadIdComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.especialidadIdComboBox.Name = "especialidadIdComboBox";
-            this.especialidadIdComboBox.Size = new System.Drawing.Size(238, 21);
+            this.especialidadIdComboBox.Size = new System.Drawing.Size(355, 28);
             this.especialidadIdComboBox.TabIndex = 2;
             this.especialidadIdComboBox.ValueMember = "Id";
             this.especialidadIdComboBox.SelectedIndexChanged += new System.EventHandler(this.especialidadIdComboBox_SelectedIndexChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(559, 52);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(218, 26);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(795, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 35);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormDoctores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(584, 221);
+            this.ClientSize = new System.Drawing.Size(934, 420);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.especialidadIdComboBox);
             this.Controls.Add(this.listaDoctoresBindingNavigator);
             this.Controls.Add(this.btnDeleteFoto);
@@ -430,6 +462,7 @@
             this.Controls.Add(this.precioTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormDoctores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Doctores y Especialidades";
@@ -475,5 +508,7 @@
         private System.Windows.Forms.BindingSource listaEspecialidadesBindingSource;
         private System.Windows.Forms.BindingSource doctorBindingSource;
         private System.Windows.Forms.ComboBox especialidadIdComboBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

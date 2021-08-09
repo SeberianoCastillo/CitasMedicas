@@ -39,6 +39,17 @@ namespace BL.CitasMedicas
             return ListaDoctores;
         }
 
+        public BindingList<Doctor> ObtenerDoctores(string buscar)
+        {
+            var query = _contexto.Doctor.Where(doctor => doctor
+            .Nombre.ToLower().Contains(buscar.ToLower()))
+            .OrderBy(doctor => doctor.Nombre)
+            .ToList();
+            
+            ListaDoctores = new BindingList<Doctor>(query);
+            return ListaDoctores;
+        }
+
         private Resultado ValidarDr(Doctor doctor)
         {
             var resultado = new Resultado();

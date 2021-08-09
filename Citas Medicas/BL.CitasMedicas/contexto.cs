@@ -10,7 +10,8 @@ namespace BL.CitasMedicas
 {
     public class Contexto: DbContext
     {
-        public Contexto(): base("Citas Medicas")
+        public Contexto() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
+                    Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\CitasMedicas.mdf")
         {
             
         }

@@ -36,10 +36,11 @@ namespace Citas_Medicas
             button1.Text = @"Verificando...";
             Application.DoEvents();
 
-           var resultado = _seguridad.Autorizar(usuario, contrasena);
+           var usuariosDB = _seguridad.Autorizar(usuario, contrasena);
 
-            if (resultado == true)
+            if (usuariosDB != null)
             {
+                Utilidades.NombreUsuario = usuariosDB.NombreUsuario;
                 Close();
             }
             else
@@ -58,6 +59,29 @@ namespace Citas_Medicas
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)
+                && !string.IsNullOrEmpty(textBox1.Text))
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)
+                 && !string.IsNullOrEmpty(textBox2.Text))
+            {
+                button1.PerformClick();
+            }
         }
     }
 }

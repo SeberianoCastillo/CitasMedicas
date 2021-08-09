@@ -66,13 +66,22 @@ namespace BL.CitasMedicas
             usuario1.Id = 1;
             usuario1.NombreUsuario = "admin";
             usuario1.Contrasena = "123";
+            usuario1.TipoUsuario = "Administradores";
             contexto.Usuarios.Add(usuario1);
 
             var usuario2 = new Usuario();
             usuario2.Id = 2;
             usuario2.NombreUsuario = "invitado";
-            usuario2.Contrasena = "123";
+            usuario2.Contrasena = "789";
+            usuario2.TipoUsuario = "Invitado";
             contexto.Usuarios.Add(usuario2);
+
+            var usuario3 = new Usuario();
+            usuario3.Id = 3;
+            usuario3.NombreUsuario = "secretaria";
+            usuario3.Contrasena = "456";
+            usuario3.TipoUsuario = "Atencion al cliente";
+            contexto.Usuarios.Add(usuario3);
 
             //Productos
             var productos1 = new Productos();

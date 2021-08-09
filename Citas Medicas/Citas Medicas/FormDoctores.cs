@@ -148,6 +148,104 @@ namespace Citas_Medicas
         {
 
         }
-    }
 
+        private void fotoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fotoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void activoLabel_Click (object sender, EventArgs e)
+        {
+
+        }
+
+        private void activoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void disponibilidadLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void disponibilidadTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void especialidadLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precioLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void precioTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+            private void Buscar()
+        {
+            var busqueda = textBox1.Text;
+
+            if (busqueda != "")
+            {
+                listaDoctoresBindingSource.DataSource = _doctores.ObtenerDoctores(busqueda);
+            }
+            else
+            {
+                listaDoctoresBindingSource.DataSource = _doctores.ObtenerDoctores();
+            }
+
+        }
+        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+                Buscar();
+                
+            }
+        }
+    }
 }

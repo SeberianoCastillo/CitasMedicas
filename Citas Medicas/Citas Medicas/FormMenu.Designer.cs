@@ -46,12 +46,17 @@
             this.reporteDoctoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Bisque;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.citaMedicaToolStripMenuItem,
@@ -60,7 +65,8 @@
             this.registrarseToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(778, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1167, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +78,7 @@
             this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.Peru;
             this.archivoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("archivoToolStripMenuItem.Image")));
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(108, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -81,7 +87,7 @@
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Peru;
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(129, 30);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -95,7 +101,7 @@
             this.citaMedicaToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.citaMedicaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("citaMedicaToolStripMenuItem.Image")));
             this.citaMedicaToolStripMenuItem.Name = "citaMedicaToolStripMenuItem";
-            this.citaMedicaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.citaMedicaToolStripMenuItem.Size = new System.Drawing.Size(148, 29);
             this.citaMedicaToolStripMenuItem.Text = "Cita Medica";
             // 
             // crearCitaMedicaToolStripMenuItem
@@ -105,7 +111,7 @@
             this.crearCitaMedicaToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.crearCitaMedicaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("crearCitaMedicaToolStripMenuItem.Image")));
             this.crearCitaMedicaToolStripMenuItem.Name = "crearCitaMedicaToolStripMenuItem";
-            this.crearCitaMedicaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.crearCitaMedicaToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.crearCitaMedicaToolStripMenuItem.Text = "Crear Cita Medica";
             this.crearCitaMedicaToolStripMenuItem.Click += new System.EventHandler(this.crearCitaMedicaToolStripMenuItem_Click);
             // 
@@ -117,7 +123,7 @@
             this.buscarCitaToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.buscarCitaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("buscarCitaToolStripMenuItem.Image")));
             this.buscarCitaToolStripMenuItem.Name = "buscarCitaToolStripMenuItem";
-            this.buscarCitaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.buscarCitaToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.buscarCitaToolStripMenuItem.Text = "Buscar Cita";
             this.buscarCitaToolStripMenuItem.Click += new System.EventHandler(this.buscarCitaToolStripMenuItem_Click);
             // 
@@ -130,7 +136,7 @@
             this.facturaciónToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.facturaciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturaciónToolStripMenuItem.Image")));
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(146, 29);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             // 
             // facturarToolStripMenuItem
@@ -139,7 +145,7 @@
             this.facturarToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.facturarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturarToolStripMenuItem.Image")));
             this.facturarToolStripMenuItem.Name = "facturarToolStripMenuItem";
-            this.facturarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.facturarToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.facturarToolStripMenuItem.Text = "Facturar";
             this.facturarToolStripMenuItem.Click += new System.EventHandler(this.facturarToolStripMenuItem_Click);
             // 
@@ -154,7 +160,7 @@
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("listaDeDoctoresYEspecialidadesToolStripMenuItem.Image")));
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Name = "listaDeDoctoresYEspecialidadesToolStripMenuItem";
-            this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(176, 20);
+            this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(267, 29);
             this.listaDeDoctoresYEspecialidadesToolStripMenuItem.Text = "Doctores y Especialidades";
             // 
             // doctoresToolStripMenuItem
@@ -166,7 +172,7 @@
             this.doctoresToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.doctoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("doctoresToolStripMenuItem.Image")));
             this.doctoresToolStripMenuItem.Name = "doctoresToolStripMenuItem";
-            this.doctoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.doctoresToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
             this.doctoresToolStripMenuItem.Text = "Doctores";
             // 
             // mantenimientoDoctoresToolStripMenuItem
@@ -174,7 +180,7 @@
             this.mantenimientoDoctoresToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.mantenimientoDoctoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mantenimientoDoctoresToolStripMenuItem.Image")));
             this.mantenimientoDoctoresToolStripMenuItem.Name = "mantenimientoDoctoresToolStripMenuItem";
-            this.mantenimientoDoctoresToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.mantenimientoDoctoresToolStripMenuItem.Size = new System.Drawing.Size(308, 30);
             this.mantenimientoDoctoresToolStripMenuItem.Text = "Mantenimiento Doctores";
             this.mantenimientoDoctoresToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDoctoresToolStripMenuItem_Click);
             // 
@@ -186,7 +192,7 @@
             this.especialidadesToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.especialidadesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("especialidadesToolStripMenuItem.Image")));
             this.especialidadesToolStripMenuItem.Name = "especialidadesToolStripMenuItem";
-            this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
             this.especialidadesToolStripMenuItem.Text = "Especialidades";
             // 
             // mantenimientoEspecialidadesToolStripMenuItem
@@ -194,7 +200,7 @@
             this.mantenimientoEspecialidadesToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.mantenimientoEspecialidadesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mantenimientoEspecialidadesToolStripMenuItem.Image")));
             this.mantenimientoEspecialidadesToolStripMenuItem.Name = "mantenimientoEspecialidadesToolStripMenuItem";
-            this.mantenimientoEspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
+            this.mantenimientoEspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(355, 30);
             this.mantenimientoEspecialidadesToolStripMenuItem.Text = "Mantenimiento Especialidades";
             // 
             // reportesToolStripMenuItem
@@ -205,7 +211,7 @@
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // reporteDoctoresToolStripMenuItem
@@ -213,7 +219,7 @@
             this.reporteDoctoresToolStripMenuItem.BackColor = System.Drawing.Color.SkyBlue;
             this.reporteDoctoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reporteDoctoresToolStripMenuItem.Image")));
             this.reporteDoctoresToolStripMenuItem.Name = "reporteDoctoresToolStripMenuItem";
-            this.reporteDoctoresToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.reporteDoctoresToolStripMenuItem.Size = new System.Drawing.Size(246, 30);
             this.reporteDoctoresToolStripMenuItem.Text = "Reporte Doctores";
             this.reporteDoctoresToolStripMenuItem.Click += new System.EventHandler(this.reporteDoctoresToolStripMenuItem_Click);
             // 
@@ -226,7 +232,7 @@
             this.registrarseToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.registrarseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("registrarseToolStripMenuItem.Image")));
             this.registrarseToolStripMenuItem.Name = "registrarseToolStripMenuItem";
-            this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.registrarseToolStripMenuItem.Size = new System.Drawing.Size(134, 29);
             this.registrarseToolStripMenuItem.Text = "Seguridad";
             // 
             // loginToolStripMenuItem
@@ -236,20 +242,46 @@
             this.loginToolStripMenuItem.ForeColor = System.Drawing.Color.Bisque;
             this.loginToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loginToolStripMenuItem.Image")));
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 559);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+            this.statusStrip1.Size = new System.Drawing.Size(1167, 30);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(76, 25);
+            this.toolStripStatusLabel1.Text = "Usuario:";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 25);
+            // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(778, 383);
+            this.ClientSize = new System.Drawing.Size(1167, 589);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
@@ -257,6 +289,8 @@
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +315,8 @@
         private System.Windows.Forms.ToolStripMenuItem buscarCitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDoctoresToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }

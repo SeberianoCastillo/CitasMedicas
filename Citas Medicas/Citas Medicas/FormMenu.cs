@@ -31,6 +31,8 @@ namespace Citas_Medicas
         {
             var formlogin = new FormLogin();
             formlogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
         }
 
         private void crearCitaMedicaToolStripMenuItem_Click(object sender, EventArgs e)
